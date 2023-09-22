@@ -10,7 +10,7 @@
 		"reveal.js": "^4.5.0"
 	},
 	"devDependencies": {
-		"abell": "1.0.0-alpha.103",
+		"abell": "1.0.0-alpha.111",
 		"vite-plugin-md-to-html": "^0.0.18"
 	}
 }

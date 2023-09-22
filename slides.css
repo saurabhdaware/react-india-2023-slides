@@ -14,12 +14,19 @@
   --abell-primary: #2E3ECC;
 }
 
+.progress {
+  color: var(--abell-primary) !important;
+  display: none !important;
+}
+
 section.left {
   text-align: left;
 }
 
 pre code {
   line-height: var(--code-line-height) !important;
+  min-height: unset !important;
+  overflow: auto !important;
 }
 
 .reveal pre {
@@ -44,6 +51,11 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   margin: auto;
   z-index: 1;
+}
+
+iframe {
+  border: 1px solid #ddd;
+  width: 100%;
 }
 
 .fragment.backdrop-filter {
@@ -72,6 +84,10 @@ li.bold {
 
 .strike {
   text-decoration: line-through;
+}
+
+.invisible {
+  visibility: hidden;
 }
 
 
@@ -128,6 +144,9 @@ li {
 .fragment.blur.visible {
   filter: none;
 }
+.fragment.red.visible {
+  color: #f00;
+}
 
 .fragment.no-transition {
   opacity: 0;
@@ -141,6 +160,7 @@ li {
 
 .bold {
   color: var(--abell-primary);
+  font-weight: 600;
 }
 
 .introducing-abell .introduction-text {
