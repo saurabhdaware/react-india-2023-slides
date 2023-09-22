@@ -1,0 +1,261 @@
+{{
+  import { EXPERIMENTAL_md as md } from 'vite-plugin-md-to-html';
+
+  const pros = [
+    /* html */ `Easy to Get Started <span style="font-size: smaller">(single-file setup)</span>`,
+    'Flexible',
+    'Smaller Learning Curve',
+    'Easy to Deploy',
+    'Super Fast'
+  ];
+
+  const cons = [
+    'No Reusability',
+    'No Support for Runtime Libraries',
+    'No Custom Routing',
+    /* html */ `No Dynamic Logic <span style="font-size: smaller">(loops, conditions, and more)</span>`
+  ]
+}}
+<html>
+<head>
+  <title>Introducing Abell - Saurabh Daware</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Menlo:wght@400&display=swap" rel="stylesheet">
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Evolution of Web Development - Saurabh Daware" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@saurabhdawaree" />
+
+  <meta property="og:image:secure_url" itemprop="image" content="https://res.cloudinary.com/saurabhdaware/image/upload/c_scale,w_600/v1687452081/Screenshot_2023-06-22_at_10.10.51_PM_rhmvdg.png"/>
+  <meta property="og:image" itemprop="image" content="https://res.cloudinary.com/saurabhdaware/image/upload/c_scale,w_600/v1687452081/Screenshot_2023-06-22_at_10.10.51_PM_rhmvdg.png"/>
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="300" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2 class="fragment custom no-transition">Remember How You Started <br/>Web Development?</h2>
+      </section>
+
+      <section>
+      {{
+        md`
+        ~~~html
+        <html>
+          <head>
+            <title>My Cool Site</title>
+          </head>
+          <body>
+            <h1>Hello, World!!</h1>
+          </body>
+        </html>
+        ~~~
+        `
+      }}
+      </section>
+
+      <section data-auto-animate>
+        <div>
+          <h2 style="display: inline-block;">HTML is kinda cool</h2>
+          <br/>
+          <ul>
+            {{
+              pros.map((pro) => /* html */`
+                <li class="fragment">${pro}</li>
+              `)
+            }}
+          </ul>
+        </div>
+      </section>
+
+      <section data-auto-animate data-auto-animate-unmatched>
+        <div class="display-flex">
+          <div class="flex-1">
+            <h2 style="display: inline-block;">HTML is kinda cool</h2>
+            <br/>
+            <ul>
+              {{
+                pros.map((pro) => /* html */`
+                  <li>${pro}</li>
+                `)
+              }}
+            </ul>
+          </div>
+          <div class="flex-1">
+            <h2>But...</h2>
+            <ul>
+              {{
+                cons.map((con) => /* html */`
+                  <li class="fragment">${con}</li>
+                `)
+              }}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <section data-transition="none-in slide-out" style="position: relative;background-color: #fff">
+        <div class="fragment custom backdrop-filter fixed-center introducing-abell">
+          <div>
+            <p class="introduction-text">Introducing</p>
+            <div class="display-flex abell-heading">
+              <img src="/abell-logo.png" width="130px" alt="Abell Logo" />
+              <h1>Abell</h1>
+            </div>
+            <p class="subtitle">A Low-Level, Framework Agnostic, <br/>Vite Powered Static-Site-Generator</p>
+          </div>
+        </div>
+        <div class="text-left blur-on-prev-visible">
+          <p>What if we can have..</p>
+          <h2>All Pros of HTML but Fix it's Cons?</h2>
+        </div>
+      </section>
+
+      <section data-transition="fade-in none-out">
+        <div style="display: flex; gap: 24px; align-items: center; justify-content: center">
+          <div style="display: inline-block">
+            <div class="profile">
+              <img class="profile-picture" src="/profile-picture.png" width="130px">
+              <div class="text-left">
+                <h2>Saurabh</h2>
+                <ul class="bio-titles">
+                  <li>Web Tooling 🤗</li>
+                  <li>Frontend @Razorpay</li>
+                </ul>
+              </div>
+            </div>
+            <div class="socials">
+              <li><img width="25px" src="/github-logo.svg" /> saurabhdawaree</li>
+              <li><img width="20px" src="/twitter-birb.png" /> saurabhdaware</li>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-auto-animate data-auto-animate-unmatched>
+      {{
+        // Not using button because on click, I want to change the list-style-type as well.
+
+        // declarations
+        const clickableListProps = `
+          style="cursor: pointer;" 
+          onclick="this.classList.toggle('bold')" 
+          onkeydown="event.key === ' '|| event.key === 'Enter' ? this.classList.toggle('bold') : ''"
+          role="button"
+          tabindex="0"
+        `
+      }}
+        <div class="display-flex">
+          <div class="flex-1">
+            <h2>HTML is kinda cool</h2>
+            <ul>
+              {{
+                pros.map((pro) => /* html */`
+                  <li ${clickableListProps}>
+                    ${pro}
+                  </li>
+                `)
+              }}
+            </ul>
+          </div>
+          <div class="flex-1">
+            <h2 data-id="but">But...</h2>
+            <ul>
+              {{
+                cons.map((con) => /* html */`
+                  <li ${clickableListProps}>
+                    ${con}
+                  </li>
+                `)
+              }}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section data-auto-animate data-auto-animate-unmatched>
+        <div class="display-flex" style="flex-wrap: wrap">
+          <h2 data-id="html-cool">HTML is kinda cool </h2>
+          <h2>and <span class="bold">Abell</span> makes it cooler</h2>
+        </div>
+      </section>
+
+      <section>
+        <h2>🥁</h2>
+      </section>
+
+
+      <section data-auto-animate>
+        <div class="display-flex abell-heading">
+          <img src="/abell-logo.png" width="130px" alt="Abell Logo" />
+          <h1>Abell</h1>
+        </div>
+      </section>
+
+      <section data-auto-animate>
+        <div class="display-flex">
+          <div data-auto-animate-id="abell-v1" class="flex-1">
+            <div class="display-flex abell-heading">
+              <img src="/abell-logo.png" width="130px" alt="Abell Logo" />
+              <h1>Abell</h1>
+            </div>
+            <h2 style="opacity: .6; display: inline-block;" data-id="v1-beta">✨ v1-beta ✨</h2>
+          </div>
+        </div>
+      </section>
+
+      <section data-auto-animate>
+        <div class="display-flex">
+          <div data-auto-animate-id="abell-v1" class="flex-1">
+            <div class="display-flex abell-heading">
+              <img src="/abell-logo.png" width="130px" alt="Abell Logo" />
+              <h1>Abell</h1>
+            </div>
+            <h2 style="opacity: .6; display: inline-block;" data-id="v1-beta">✨ v1-beta ✨</h2>
+          </div>
+          <div class="flex-1">
+            <ul class="abell-v1-features">
+              <li>Built on Vite 🫶🏼</li>
+              <li>Vite Plugins Support</li>
+              <li>Custom Routing</li>
+              <li>Extends on Vanilla HTML setup</li>
+              <li>Low-Level, and Flexible</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <section>
+        <div class="display-flex">
+          <div class="flex-1">
+            <div class="profile">
+              <img class="profile-picture" src="/profile-picture.png" width="120px">
+            </div>
+            <div>
+              <ul class="thanks socials">
+                <li><img width="25px" src="/github-logo.svg" /> saurabhdawaree</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex-1" style="align-self: center;">
+            <h1>Thanks!</h1>
+            <ul class="thanks socials">
+              <li><img width="25px" src="/github-logo.svg" /> abelljs/abell</li>
+              <li><img width="25px" src="/abell-logo.png" /> abelljs.org</li>
+            </ul>
+          </div>
+        </div>
+        
+      </section>
+    </div>
+  </div>
+  <script src="/client.ts" type="module"></script>
+</body>
+</html>

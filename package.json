@@ -1,0 +1,16 @@
+{
+	"type": "module",
+	"scripts": {
+		"dev": "abell dev",
+		"build": "abell generate"
+	},
+	"dependencies": {
+		"dedent": "^0.7.0",
+		"highlight.js": "^11.8.0",
+		"reveal.js": "^4.5.0"
+	},
+	"devDependencies": {
+		"abell": "1.0.0-alpha.103",
+		"vite-plugin-md-to-html": "^0.0.18"
+	}
+}
