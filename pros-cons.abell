@@ -1,0 +1,79 @@
+{{
+  /** @declaration */
+  const getClass = (index) => {
+    if (props.unchecked.includes(index)) {
+      return 'unchecked';
+    }
+
+    return 'checked';
+  }
+
+  const getLogo = (logo, isActive) => {
+    if (logo === 'astro') {
+      return /* html */ `<img class="${ isActive ? 'active' : '' }" height="30px" src="/astro.png" />`
+    }
+
+    if (logo === 'react') {
+      return /* html */ `<img class="${ isActive ? 'active' : '' }" height="40px" src="/react.webp" />`
+    }
+
+    if (logo === 'next') {
+      return /* html */ `<img class="${ isActive ? 'active' : '' }" height="20px" src="/nextjs.png" />`
+    }
+
+    if (logo === 'remix') {
+      return /* html */ `<img class="${ isActive ? 'active' : '' }" height="20px" src="/remix.png" />`
+    }
+
+    return /* html */ `<img class="${ isActive ? 'active' : '' }" height="50px" src="/html-css.webp" />`;
+  }
+}}
+
+<div class="pros-logo-container">
+  {{ 
+    ['html', 'react', 'remix', 'next', 'astro']
+      .map((logo) => getLogo(logo, logo === props.logo))
+  }}
+  <p class="{{ props.logo === 'abell' ? 'active' : '' }}" style="font-weight: bold">???</p>
+</div>
+<div class="display-flex">
+  <div class="flex-1">
+    <h3>Good Parts of HTML</h3>
+    <ul>
+      <li class="{{ getClass(0) }}">Easy to Get Started</li>
+      <li class="{{ getClass(1) }}">Flexible</li>
+      <li class="{{ getClass(2) }}">Smaller Learning Curve</li>
+      <li class="{{ getClass(3) }}">Easy to Deploy</li>
+      <li class="{{ getClass(4) }}">Super Fast</li>
+    </ul>
+  </div>
+  <div class="flex-1">
+    <h3>Usecases</h3>
+    <ul>
+      <li class="{{ getClass(5) }}">Documentation Site</li>
+      <li class="{{ getClass(6) }}">Blog Site</li>
+      <li class="{{ getClass(7) }}">Portfolio / Landing Pages</li>
+    </ul>
+  </div>
+</div>
+
+<style scoped="false">
+  .pros-logo-container {
+    height: 100px; 
+    margin-bottom: 24px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    gap: 32px;
+  }
+
+  .pros-logo-container img, .pros-logo-container p {
+    opacity: 0.3;
+    filter: blur(2px);
+  }
+
+  .pros-logo-container img.active, .pros-logo-container  p.active {
+    opacity: 1;
+    filter: blur(0px);
+  }
+</style>

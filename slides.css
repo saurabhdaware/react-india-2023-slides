@@ -145,7 +145,7 @@ li {
   filter: none;
 }
 .fragment.red.visible {
-  color: #f00;
+  color: #f00 !important;
 }
 
 .fragment.no-transition {
@@ -159,7 +159,7 @@ li {
 }
 
 .bold {
-  color: var(--abell-primary);
+  color: var(--abell-primary) !important;
   font-weight: 600;
 }
 
@@ -210,6 +210,15 @@ li {
   font-weight: 600;
   color: #666;
 }
+
+.reveal li.checked {
+  list-style-type: '✅ ';
+}
+
+.reveal li.unchecked {
+  list-style-type: '❌ ';
+}
+
 
 ul.abell-v1-features li {
   margin: 14px 0px; 

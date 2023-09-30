@@ -1,5 +1,6 @@
 {{
   import { EXPERIMENTAL_md as md } from 'vite-plugin-md-to-html';
+  import prosAndCons from './pros-cons.abell';
 }}
 <html>
 <head>
@@ -24,6 +25,10 @@
   <div class="reveal">
     <div class="slides">
       <section>
+        <h2>👋🏼</h2>
+      </section>
+
+      <section>
         <iframe class="r-stretch" src="https://saurabhdaware.github.io/text-to-handwriting/"></iframe>
       </section>
 
@@ -47,31 +52,101 @@
         </div>
       </section>
 
-      <section>
-        <h2>HTML is pretty cool, actually</h2>
-      </section>
-
-       <section data-auto-animate>
-        <img src="/js-vs-html-chart-final.svg" />
+      <section data-auto-animate>
+        <h3>HTML is pretty cool, actually</h3>
       </section>
 
       <section data-auto-animate>
+        <h3 id="html-heading">Good Parts of HTML</h3>
+      </section>
+
+      <section data-auto-animate>
+        <h3 id="html-heading">Good Parts of HTML</h3>
+        <ul>
+          <li>Easy to Get Started</li>
+          <li class="fragment">Flexible</li>
+          <li class="fragment">Smaller Learning Curve</li>
+          <li class="fragment">Easy to Deploy</li>
+          <li class="fragment">Super Fast</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Let's Build Everything in Vanilla HTML!!</h2>
+        <img width="400px" src="/all-the-things-meme.jpeg" />
+      </section>
+
+    
+      <section>
+        <img src="/js-vs-html-chart-usecases.svg" />
+      </section>
+
+      <section>
+        <img src="/js-vs-html-chart-final.svg" />
+      </section>
+
+      <section>
+        <img src="/js-vs-html-chart-circled.svg" />
+      </section>
+
+      <section>
         <ul style="list-style: none">
-          <li>Can you build <span class="bold fragment custom red" data-fragment-index="4">an E-Commerce website</span> in Vanilla HTML?</li>
-          <li class="fragment" data-fragment-index="1"><span class="invisible">Can you build </span><span class="bold fragment custom red" data-fragment-index="4">a Blog Site</span></li>
-          <li class="fragment" data-fragment-index="2"><span class="invisible">Can you build </span><span class="bold fragment custom red" data-fragment-index="4">a Documentation Site</span></li>
-          <li class="fragment" data-fragment-index="3"><span class="invisible">Can you build </span><span class="bold fragment custom red" data-fragment-index="4">a Portfolio</span></li>
+          <li>Can you build <span class="bold fragment custom red" data-fragment-index="4">Documentation Site</span> in Vanilla HTML?</li>
+          <li class="fragment" data-fragment-index="1"><span class="invisible">Can you build </span><span class="bold fragment custom red" data-fragment-index="4">Blog Site</span></li>
+          <li class="fragment" data-fragment-index="3"><span class="invisible">Can you build </span><span class="bold fragment custom red" data-fragment-index="4">Portfolio / Landing Pages</span></li>
           <li class="fragment" data-fragment-index="4">❌</li>
         </ul>
       </section>
 
       <section data-auto-animate>
-        <ul style="list-style: none">
-          <li>an E-Commerce Website</li>
-          <li>a Blog Site</li>
-          <li>a Documentation Site</li>
-          <li>a Portfolio</li>
-        </ul>
+        {{ prosAndCons({ unchecked: [5, 6, 7], logo: 'html' }) }}
+      </section>
+
+      <section data-auto-animate>
+        {{ prosAndCons({ unchecked: [2, 4], logo: 'react' }) }}
+      </section>
+
+      <section data-auto-animate>
+        {{ prosAndCons({ unchecked: [2, 3], logo: 'remix' }) }}
+      </section>
+
+      <section data-auto-animate>
+        {{ prosAndCons({ unchecked: [1, 2, 3], logo: 'next' }) }}
+      </section>
+
+      <section data-auto-animate>
+        {{ prosAndCons({ unchecked: [1, 2], logo: 'astro' }) }}
+      </section>
+
+      <section data-auto-animate>
+        {{ prosAndCons({ unchecked: [], logo: 'abell' }) }}
+      </section>
+
+      <section data-auto-animate>
+        <div class="introducing-abell">
+          <p class="introduction-text">Introducing</p>
+        </div>
+      </section>
+
+      <section data-auto-animate>
+        <div class="introducing-abell">
+          <p class="introduction-text">Introducing</p>
+          <div class="display-flex abell-heading">
+            <img src="/abell-logo.png" width="130px" alt="Abell Logo" />
+            <h1>Abell</h1>
+          </div>
+          <p class="subtitle">A Low-Level, Framework Agnostic, <br/>Vite Powered Static-Site-Generator</p>
+        </div>
+      </section>
+
+      <section>
+        <p>HTML is pretty cool, but...</p>
+        <h3 class="fragment">HTML is Not a Programming Language 😢</h3>
+        <h2 class="fragment bold">What if we turn it into one?</h2>
+      </section>
+
+      <section>
+        <h2>???</h2>
       </section>
 
       
