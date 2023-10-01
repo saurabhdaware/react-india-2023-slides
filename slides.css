@@ -38,6 +38,7 @@ pre code {
   line-height: var(--code-line-height) !important;
   min-height: unset !important;
   overflow: auto !important;
+  max-height: 500px !important;
 }
 
 .reveal pre {
@@ -170,6 +171,11 @@ li {
 }
 
 .bold {
+  color: var(--abell-primary) !important;
+  font-weight: 700;
+}
+
+.semibold {
   color: var(--abell-primary) !important;
   font-weight: 600;
 }
