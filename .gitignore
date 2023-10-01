@@ -1,3 +1,4 @@
 node_modules
 dist
 viteconf.m4v
+.DS_Store

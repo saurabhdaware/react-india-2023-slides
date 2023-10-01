@@ -33,6 +33,12 @@
       </section>
 
       <section>
+        <div>
+          <img width="500px" src="/dan-tweet.png" />
+        </div>
+      </section>
+
+      <section>
         <div class="display-flex" style="justify-content: space-around">
           <div class="fragment" style="width: 500px">
             {{
@@ -53,15 +59,11 @@
       </section>
 
       <section data-auto-animate>
-        <h3>HTML is pretty cool, actually</h3>
+        <h3 id="html-heading">HTML is pretty cool, actually</h3>
       </section>
 
       <section data-auto-animate>
-        <h3 id="html-heading">Good Parts of HTML</h3>
-      </section>
-
-      <section data-auto-animate>
-        <h3 id="html-heading">Good Parts of HTML</h3>
+        <h3 id="html-heading">HTML is pretty cool, actually</h3>
         <ul>
           <li>Easy to Get Started</li>
           <li class="fragment">Flexible</li>
@@ -69,24 +71,6 @@
           <li class="fragment">Easy to Deploy</li>
           <li class="fragment">Super Fast</li>
         </ul>
-      </section>
-
-      <section>
-        <h2>Let's Build Everything in Vanilla HTML!!</h2>
-        <img width="400px" src="/all-the-things-meme.jpeg" />
-      </section>
-
-    
-      <section>
-        <img src="/js-vs-html-chart-usecases.svg" />
-      </section>
-
-      <section>
-        <img src="/js-vs-html-chart-final.svg" />
-      </section>
-
-      <section>
-        <img src="/js-vs-html-chart-circled.svg" />
       </section>
 
       <section>
@@ -98,27 +82,29 @@
         </ul>
       </section>
 
-      <section data-auto-animate>
-        {{ prosAndCons({ unchecked: [5, 6, 7], logo: 'html' }) }}
+      <section>
+        <h3>Missing Features in HTML 😢</h3>
+        <ul>
+          <li class="fragment">No Reusability</li>
+          <li class="fragment">MDX / MD / TS / JSX Integrations</li>
+          <li class="fragment">Plugins</li>
+          <li class="fragment">Dynamic Routing</li>
+        </ul>
       </section>
 
       <section data-auto-animate>
-        {{ prosAndCons({ unchecked: [2, 4], logo: 'react' }) }}
+        {{ prosAndCons({ unchecked: [3, 4, 5], logo: 'html' }) }}
       </section>
 
       <section data-auto-animate>
-        {{ prosAndCons({ unchecked: [2, 3], logo: 'remix' }) }}
+        {{ prosAndCons({ unchecked: [2, 4], logo: 'jekyll-hugo' }) }}
       </section>
 
       <section data-auto-animate>
-        {{ prosAndCons({ unchecked: [1, 2, 3], logo: 'next' }) }}
+        {{ prosAndCons({ unchecked: [0, 1, 2], logo: 'react-remix-astro' }) }}
       </section>
 
-      <section data-auto-animate>
-        {{ prosAndCons({ unchecked: [1, 2], logo: 'astro' }) }}
-      </section>
-
-      <section data-auto-animate>
+      <section>
         {{ prosAndCons({ unchecked: [], logo: 'abell' }) }}
       </section>
 
@@ -140,9 +126,36 @@
       </section>
 
       <section>
-        <p>HTML is pretty cool, but...</p>
-        <h3 class="fragment">HTML is Not a Programming Language 😢</h3>
-        <h2 class="fragment bold">What if we turn it into one?</h2>
+        <h2>Demo</h2>
+      </section>
+
+      <section>
+        <h2>🥁</h2>
+      </section>
+
+        <section data-auto-animate>
+        <div class="display-flex">
+          <div data-auto-animate-id="abell-v1" class="flex-1">
+            <div class="display-flex abell-heading">
+              <img src="/abell-logo.png" width="130px" alt="Abell Logo" />
+              <h1>Abell</h1>
+            </div>
+            <h2 style="opacity: .6; display: inline-block;" data-id="v1-beta">✨ v1 beta ✨</h2>
+          </div>
+        </div>
+      </section>
+
+      <section data-auto-animate>
+        <div class="display-flex">
+          <div data-auto-animate-id="abell-v1" class="flex-1">
+            <div class="display-flex abell-heading">
+              <img src="/abell-logo.png" width="130px" alt="Abell Logo" />
+              <h1>Abell</h1>
+            </div>
+            <h2 style="opacity: .6; display: inline-block;" data-id="v1-beta">✨ v1 beta ✨</h2>
+            <div style="margin: 18px;"><code>npx create-abell</code></div>
+          </div>
+        </div>
       </section>
 
       <section>

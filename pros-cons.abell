@@ -9,20 +9,28 @@
   }
 
   const getLogo = (logo, isActive) => {
-    if (logo === 'astro') {
-      return /* html */ `<img class="${ isActive ? 'active' : '' }" height="30px" src="/astro.png" />`
+    if (logo === 'jekyll-hugo') {
+      return /* html */ `
+      <div class="display-flex" style="flex-direction: column; gap: 18px">
+        <img class="${ isActive ? 'active' : '' }" height="24px" style="margin: 0px" src="/jekyll.png" />
+        <img class="${ isActive ? 'active' : '' }" height="24px" style="margin: 0px" src="/hugo.png" />
+        <img class="${ isActive ? 'active' : '' }" height="24px" style="margin: 0px" src="/hexo.png" />
+      </div>
+      `
     }
 
-    if (logo === 'react') {
-      return /* html */ `<img class="${ isActive ? 'active' : '' }" height="40px" src="/react.webp" />`
+    if (logo === 'react-remix-astro') {
+      return /* html */ `
+      <div class="display-flex" style="flex-direction: column; gap: 24px;">
+        <img class="${ isActive ? 'active' : '' }" height="18px" style="margin: 0px" src="/remix.png" />
+        <img class="${ isActive ? 'active' : '' }" height="18px" style="margin: 0px" src="/nextjs.png" />
+        <img class="${ isActive ? 'active' : '' }" height="24px" style="margin: 0px" src="/astro.png" />
+      </div>
+      `
     }
 
-    if (logo === 'next') {
-      return /* html */ `<img class="${ isActive ? 'active' : '' }" height="20px" src="/nextjs.png" />`
-    }
-
-    if (logo === 'remix') {
-      return /* html */ `<img class="${ isActive ? 'active' : '' }" height="20px" src="/remix.png" />`
+    if (logo === 'abell') {
+        return /* html */ `<p class="${ props.logo === 'abell' ? 'active' : '' }" style="font-weight: bold">???</p>`
     }
 
     return /* html */ `<img class="${ isActive ? 'active' : '' }" height="50px" src="/html-css.webp" />`;
@@ -31,45 +39,69 @@
 
 <div class="pros-logo-container">
   {{ 
-    ['html', 'react', 'remix', 'next', 'astro']
+    ['html', 'jekyll-hugo', 'react-remix-astro', 'abell']
       .map((logo) => getLogo(logo, logo === props.logo))
   }}
-  <p class="{{ props.logo === 'abell' ? 'active' : '' }}" style="font-weight: bold">???</p>
-</div>
-<div class="display-flex">
-  <div class="flex-1">
-    <h3>Good Parts of HTML</h3>
-    <ul>
-      <li class="{{ getClass(0) }}">Easy to Get Started</li>
-      <li class="{{ getClass(1) }}">Flexible</li>
-      <li class="{{ getClass(2) }}">Smaller Learning Curve</li>
-      <li class="{{ getClass(3) }}">Easy to Deploy</li>
-      <li class="{{ getClass(4) }}">Super Fast</li>
-    </ul>
-  </div>
-  <div class="flex-1">
-    <h3>Usecases</h3>
-    <ul>
-      <li class="{{ getClass(5) }}">Documentation Site</li>
-      <li class="{{ getClass(6) }}">Blog Site</li>
-      <li class="{{ getClass(7) }}">Portfolio / Landing Pages</li>
-    </ul>
-  </div>
 </div>
 
-<style scoped="false">
+{{
+  props.logo === 'abell'
+  ? /* html */ `
+  <div class="content-container abell-qualities">
+    <ul style="list-style: none">
+      <li class="fragment"><span class="bold">Low-Level</span> like Jekyll</li>
+      <li class="fragment"><span class="bold">Integrates with Modern Tools</span> like Astro</li>
+      <li class="fragment"><span class="bold">Small Learning Curve</span> like Vanilla HTML</li>
+    </ul>
+  </div>
+  `
+  : /* html */ `
+  <div class="content-container display-flex">
+    <div class="flex-1">
+      <h4>Good Parts of HTML</h4>
+      <ul>
+        <li class="${getClass(0)}">Easy to Get Started</li>
+        <li class="${getClass(1)}">Flexible</li>
+        <li class="${getClass(2)}">Smaller Learning Curve</li>
+      </ul>
+    </div>
+    <div class="flex-1">
+      <h4>Missing Features in HTML</h4>
+      <ul>
+        <li class="${getClass(3)}">Reusability</li>
+        <li class="${getClass(4)}">MDX / MD / TS / JSX Integrations</li>
+        <li class="${getClass(5)}">Dynamic Routing</li>
+      </ul>
+    </div>
+  </div>
+  `
+}}
+
+<style>
+  li {
+    margin-bottom: 18px;
+  }
+
   .pros-logo-container {
-    height: 100px; 
-    margin-bottom: 24px; 
+    margin-bottom: 50px; 
     display: flex; 
     align-items: center;
     justify-content: center; 
-    gap: 32px;
+    gap: 64px;
   }
 
+  .hide {
+    display: none;
+  }
+
+  .content-container {
+    min-height: 250px;
+  }
+</style>
+<style scoped="false">
   .pros-logo-container img, .pros-logo-container p {
     opacity: 0.3;
-    filter: blur(2px);
+    filter: blur(1.4px);
   }
 
   .pros-logo-container img.active, .pros-logo-container  p.active {
