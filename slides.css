@@ -56,6 +56,10 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
 }
 
+.align-items-center {
+  align-items: center;
+}
+
 .fixed-center {
   position: absolute; 
   top: -50%;
@@ -126,6 +130,34 @@ img.bordered {
 li {
   margin: 12px 0px;
   font-size: 24px;
+}
+
+.intro-job-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 20px;
+}
+
+.intro-job-title p {
+  margin: 0px;
+}
+
+.intro-job-title {
+  margin: 12px 0px 18px;
+}
+
+.intro-slide img {
+  margin: 0px;
+}
+
+.intro-slide h2 {
+  margin: 8px 0px;
+}
+
+.intro-slide .socials {
+  margin: 16px 0px !important;
 }
 
 .reveal ul.static-sites-examples {
@@ -249,21 +281,20 @@ ul.abell-v1-features li {
 }
 
 .socials {
-  display: flex;
+  display: flex !important;
+  flex-direction: row;
 }
 
 .socials li {
   display: flex;
   align-items: center;
   gap: 6px;
+  font-size: 20px;
+  margin: 0px 8px !important;
 }
 
 .bio-titles li, .socials li {
-  margin: 12px 0px;
-}
-
-.socials li {
-  margin: 8px;
+  margin: 0px 0px;
 }
 
 .thanks-socials {

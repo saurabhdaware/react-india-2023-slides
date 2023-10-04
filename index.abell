@@ -98,15 +98,36 @@
       </section>
 
       <section data-auto-animate>
-        {{ prosAndCons({ unchecked: [2, 4], logo: 'jekyll-hugo' }) }}
+        {{ prosAndCons({ unchecked: [4], logo: 'jekyll-hugo' }) }}
       </section>
 
       <section data-auto-animate>
-        {{ prosAndCons({ unchecked: [0, 1, 2], logo: 'react-remix-astro' }) }}
+        {{ prosAndCons({ unchecked: [1, 2], logo: 'react-remix-astro' }) }}
       </section>
 
       <section>
         {{ prosAndCons({ unchecked: [], logo: 'abell' }) }}
+      </section>
+
+      <section data-transition="fade-in none-out">
+        <div class="intro-slide" style="display: flex; gap: 24px; align-items: center; justify-content: center">
+          <div style="display: inline-block">
+            <div style="text-align: center">
+              <img class="profile-picture" src="/profile-picture.png" width="80px">
+              <div>
+                <h2>Saurabh Daware</h2>
+                <div class="intro-job-title">
+                  <p>Senior Frontend Engineer</p>
+                  <img width="120px" src="/razorpay-logo.svg" />
+                </div>
+                <ul class="socials">
+                  <li><img width="18px" src="/github-logo.svg" /> saurabhdawaree</li>
+                  <li><img width="16px" src="/twitter-birb.png" /> saurabhdaware</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section data-auto-animate>
@@ -239,8 +260,8 @@
                 render: () => index()
               }
               ...posts.map((post) => ({
-                path: post.path,
-                render: () => layout(post.content.html)
+                path: post.slug,
+                render: () => layout(post.content.rendered)
               }))
             ]
           }
@@ -293,6 +314,7 @@
 
       <section>
         <h2>???</h2>
+        
       </section>
 
       

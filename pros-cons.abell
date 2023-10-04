@@ -60,7 +60,7 @@
     <div class="flex-1">
       <h4>Good Parts of HTML</h4>
       <ul>
-        <li class="${getClass(0)}">Easy to Get Started</li>
+        <li class="${getClass(0)}">Super Fast</li>
         <li class="${getClass(1)}">Flexible</li>
         <li class="${getClass(2)}">Smaller Learning Curve</li>
       </ul>
