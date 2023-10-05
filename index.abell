@@ -101,6 +101,13 @@
         {{ prosAndCons({ unchecked: [4], logo: 'jekyll-hugo' }) }}
       </section>
 
+      <!-- 
+      - How abell v0 was similar to Jekyll, Hugo
+      - What went wrong with v0?
+      - How eleventy did it
+      - How bundlers help
+      -->
+
       <section data-auto-animate>
         {{ prosAndCons({ unchecked: [1, 2], logo: 'react-remix-astro' }) }}
       </section>
