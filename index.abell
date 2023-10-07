@@ -428,7 +428,13 @@
         <h2>🥁</h2>
       </section>
 
-        <section data-auto-animate>
+      <section>
+        <h2>Ecosystem?</h2>
+        <p class="fragment">All of JS 🫡</p>
+      </section>
+
+
+      <section data-auto-animate>
         <div class="display-flex">
           <div data-auto-animate-id="abell-v1" class="flex-1">
             <div class="display-flex abell-heading">
@@ -439,6 +445,7 @@
           </div>
         </div>
       </section>
+
 
       <section data-auto-animate>
         <div class="display-flex">
