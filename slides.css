@@ -116,9 +116,6 @@ li.bold {
   flex: 1;
 }
 
-.flex-1 pre {
-  width: 50% !important;
-}
 
 img.bordered {
   box-sizing: border-box;
@@ -317,4 +314,8 @@ section[data-transition*="none-out"].past {
 section[data-transition*="none-in"].future,
 section[data-transition*="none-in"].present {
   transition-duration: 0s !important;
+}
+
+.thank-you-slide img {
+  border: 1px solid #000;
 }
