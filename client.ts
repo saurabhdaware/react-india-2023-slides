@@ -13,6 +13,7 @@ let deck = new Reveal({
   controls: false,
   transitionSpeed: 'fast',
   autoAnimateDuration: 0.3,
+  navigationMode: 'linear',
 })
 
 deck.initialize();

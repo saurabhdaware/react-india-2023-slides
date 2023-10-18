@@ -42,8 +42,8 @@
                   <img width="120px" src="/razorpay-logo.svg" />
                 </div>
                 <ul class="socials">
-                  <li><img width="18px" src="/github-logo.svg" /> saurabhdawaree</li>
-                  <li><img width="16px" src="/twitter-birb.png" /> saurabhdaware</li>
+                  <li><img width="18px" src="/github-logo.svg" /> saurabhdaware</li>
+                  <li><img width="16px" src="/twitter-birb.png" /> saurabhdawaree</li>
                 </ul>
               </div>
             </div>
@@ -274,6 +274,10 @@
       - How bundlers help
       -->
 
+      <section>
+        {{ prosAndCons({ unchecked: [4], logo: 'jekyll-hugo' }) }}
+      </section>
+
       <section data-auto-animate>
         {{ prosAndCons({ unchecked: [1, 2], logo: 'react-remix-astro' }) }}
       </section>
@@ -472,8 +476,8 @@
       </section>
 
       <section class="thank-you-slide">
-        <h2>???</h2>
-        <!-- <img width="400px" src="/a-very-useful-image.png" /> -->
+        <h2>Thank You</h2>
+        <img width="400px" src="/a-very-useful-image.png" />
       </section>
 
       
