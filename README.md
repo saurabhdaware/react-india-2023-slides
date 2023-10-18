@@ -1,8 +1,6 @@
-# Evolution of Web Development (ft React Server Components)
+# React India 2023 Goa Slides
 
-This repo holds the code for my slides from React Bangalore Meetup talk.
-
-You can checkout hosted slides here - https://web-evolution-slides.saurabhdaware.in/1
+These are my slides for React India 2023 talk "In The World of JS Frameworks, It's an HTML Framework!"
 
 ## Local Setup
 

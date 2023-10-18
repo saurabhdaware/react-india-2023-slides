@@ -1,6 +1,6 @@
 {{
   import { EXPERIMENTAL_md as md } from 'vite-plugin-md-to-html';
-  import prosAndCons from './pros-cons.abell';
+  import prosAndCons from './_pros-cons.abell';
 }}
 <html>
 <head>
