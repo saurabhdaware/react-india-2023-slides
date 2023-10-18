@@ -23,10 +23,22 @@ section.left {
   text-align: left;
 }
 
+code {
+  font-family: Menlo,monospace,Courier;
+  background-color: #E7EBFD;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: smaller;
+}
+
 pre code {
+  font-size: unset;
+  padding: unset;
+  background-color: unset;
   line-height: var(--code-line-height) !important;
   min-height: unset !important;
   overflow: auto !important;
+  max-height: 500px !important;
 }
 
 .reveal pre {
@@ -42,6 +54,10 @@ h1, h2, h3, h4, h5, h6 {
 .display-flex {
   display: flex;
   box-sizing: border-box;
+}
+
+.align-items-center {
+  align-items: center;
 }
 
 .fixed-center {
@@ -100,9 +116,6 @@ li.bold {
   flex: 1;
 }
 
-.flex-1 pre {
-  width: 50% !important;
-}
 
 img.bordered {
   box-sizing: border-box;
@@ -114,6 +127,34 @@ img.bordered {
 li {
   margin: 12px 0px;
   font-size: 24px;
+}
+
+.intro-job-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 20px;
+}
+
+.intro-job-title p {
+  margin: 0px;
+}
+
+.intro-job-title {
+  margin: 12px 0px 18px;
+}
+
+.intro-slide img {
+  margin: 0px;
+}
+
+.intro-slide h2 {
+  margin: 8px 0px;
+}
+
+.intro-slide .socials {
+  margin: 16px 0px !important;
 }
 
 .reveal ul.static-sites-examples {
@@ -145,7 +186,7 @@ li {
   filter: none;
 }
 .fragment.red.visible {
-  color: #f00;
+  color: #f00 !important;
 }
 
 .fragment.no-transition {
@@ -159,7 +200,12 @@ li {
 }
 
 .bold {
-  color: var(--abell-primary);
+  color: var(--abell-primary) !important;
+  font-weight: 700;
+}
+
+.semibold {
+  color: var(--abell-primary) !important;
   font-weight: 600;
 }
 
@@ -211,6 +257,15 @@ li {
   color: #666;
 }
 
+.reveal li.checked {
+  list-style-type: '✅ ';
+}
+
+.reveal li.unchecked {
+  list-style-type: '❌ ';
+}
+
+
 ul.abell-v1-features li {
   margin: 14px 0px; 
 }
@@ -223,21 +278,20 @@ ul.abell-v1-features li {
 }
 
 .socials {
-  display: flex;
+  display: flex !important;
+  flex-direction: row;
 }
 
 .socials li {
   display: flex;
   align-items: center;
   gap: 6px;
+  font-size: 20px;
+  margin: 0px 8px !important;
 }
 
 .bio-titles li, .socials li {
-  margin: 12px 0px;
-}
-
-.socials li {
-  margin: 8px;
+  margin: 0px 0px;
 }
 
 .thanks-socials {
@@ -260,4 +314,8 @@ section[data-transition*="none-out"].past {
 section[data-transition*="none-in"].future,
 section[data-transition*="none-in"].present {
   transition-duration: 0s !important;
+}
+
+.thank-you-slide img {
+  border: 1px solid #000;
 }

@@ -1,5 +1,6 @@
 {{
   import { EXPERIMENTAL_md as md } from 'vite-plugin-md-to-html';
+  import prosAndCons from './pros-cons.abell';
 }}
 <html>
 <head>
@@ -9,8 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Menlo:wght@400&display=swap" rel="stylesheet">
   
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Evolution of Web Development - Saurabh Daware" />
+  <meta property="og:title" content="In the World of JS Frameworks, It's an HTML Framework - Saurabh Daware" />
   
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@saurabhdawaree" />
@@ -24,7 +27,39 @@
   <div class="reveal">
     <div class="slides">
       <section>
+        <h2>In The World of JS Frameworks <br/>It's an <span class="bold">HTML Framework</span></h2>
+      </section>
+
+       <section>
+        <div class="intro-slide" style="display: flex; gap: 24px; align-items: center; justify-content: center">
+          <div style="display: inline-block">
+            <div style="text-align: center">
+              <img class="profile-picture" src="/profile-picture.png" width="80px">
+              <div>
+                <h2>Saurabh Daware</h2>
+                <div class="intro-job-title">
+                  <p>Senior Frontend Engineer</p>
+                  <img width="120px" src="/razorpay-logo.svg" />
+                </div>
+                <ul class="socials">
+                  <li><img width="18px" src="/github-logo.svg" /> saurabhdaware</li>
+                  <li><img width="16px" src="/twitter-birb.png" /> saurabhdawaree</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section>
         <iframe class="r-stretch" src="https://saurabhdaware.github.io/text-to-handwriting/"></iframe>
+      </section>
+
+      <section>
+        <div>
+          <img width="500px" src="/dan-tweet.png" />
+        </div>
       </section>
 
       <section>
@@ -47,31 +82,402 @@
         </div>
       </section>
 
-      <section>
-        <h2>HTML is pretty cool, actually</h2>
-      </section>
-
-       <section data-auto-animate>
-        <img src="/js-vs-html-chart-final.svg" />
+      <section data-auto-animate>
+        <h3 id="html-heading">HTML is pretty cool, actually</h3>
       </section>
 
       <section data-auto-animate>
+        <h3 id="html-heading">HTML is pretty cool, actually</h3>
+        <ul>
+          <li>Easy to Get Started</li>
+          <li class="fragment">Flexible</li>
+          <li class="fragment">Smaller Learning Curve</li>
+          <li class="fragment">Super Fast</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Lets Build Everything in HTML then!!</h3>
+        <img src="/all-the-things-meme.jpeg" />
+      </section>
+
+      <section>
+        <img src="/js-vs-html-chart-usecases.svg" />
+      </section>
+
+      <section>
+        <img src="/js-vs-html-chart-final.svg" />
+      </section>
+
+      <section>
+        <img src="/js-vs-html-chart-circled.svg" />
+      </section>
+
+      <section>
         <ul style="list-style: none">
-          <li>Can you build <span class="bold fragment custom red" data-fragment-index="4">an E-Commerce website</span> in Vanilla HTML?</li>
-          <li class="fragment" data-fragment-index="1"><span class="invisible">Can you build </span><span class="bold fragment custom red" data-fragment-index="4">a Blog Site</span></li>
-          <li class="fragment" data-fragment-index="2"><span class="invisible">Can you build </span><span class="bold fragment custom red" data-fragment-index="4">a Documentation Site</span></li>
-          <li class="fragment" data-fragment-index="3"><span class="invisible">Can you build </span><span class="bold fragment custom red" data-fragment-index="4">a Portfolio</span></li>
+          <li>Can you build <span class="semibold fragment custom red" data-fragment-index="4">Documentation Site</span> in Vanilla HTML?</li>
+          <li class="fragment" data-fragment-index="1"><span class="invisible">Can you build </span><span class="semibold fragment custom red" data-fragment-index="4">Blog Site</span></li>
+          <li class="fragment" data-fragment-index="3"><span class="invisible">Can you build </span><span class="semibold fragment custom red" data-fragment-index="4">Portfolio / Landing Pages</span></li>
           <li class="fragment" data-fragment-index="4">❌</li>
         </ul>
       </section>
 
-      <section data-auto-animate>
-        <ul style="list-style: none">
-          <li>an E-Commerce Website</li>
-          <li>a Blog Site</li>
-          <li>a Documentation Site</li>
-          <li>a Portfolio</li>
+      <section>
+        <h3>Missing Features in HTML 😢</h3>
+        <ul>
+          <li class="fragment">No Reusability</li>
+          <li class="fragment">MDX / MD / TS / JSX Integrations</li>
+          <li class="fragment">Plugins</li>
+          <li class="fragment">Dynamic Routing</li>
         </ul>
+      </section>
+
+      <section data-auto-animate>
+        {{ prosAndCons({ unchecked: [3, 4, 5], logo: 'html' }) }}
+      </section>
+
+      <section data-auto-animate>
+        <section data-transition="slide-out none-in">
+          {{ prosAndCons({ unchecked: [4], logo: 'jekyll-hugo' }) }}
+        </section>
+        <section data-transition="slide">
+          <h2>Why?</h2>
+        </section>
+        <section data-transition="slide">
+          <div class="display-flex">
+            <div class="flex-1">
+              {{
+                md`
+                \`index.xyz\`
+                ~~~abell
+                <html>
+                <body>
+                  <% 'hello'.toUpperCase() %>
+                </body>
+                </html>
+                ~~~
+                `
+              }}
+            </div>
+            <div class="flex-1">
+              {{
+                md`
+                \`index.html\`
+                ~~~html
+                <html>
+                <body>
+                  HELLO
+                </body>
+                </html>
+                ~~~
+                `
+              }}
+            </div>
+          </div>
+        </section>
+        <section data-transition="slide">
+          <div class="display-flex" style="align-items: center; justify-content: stretch">
+            <div class="flex-1">
+              {{
+                md`
+                \`index.xyz\`
+                ~~~abell
+                <%
+                  const content = require('./content.mdx');
+                  const three: number = 3;
+                %>
+                <html>
+                <body>
+                  <% three %>
+                  <% content %>
+                </body>
+                </html>
+                ~~~
+                `
+              }}
+            </div>
+            <div><small style="font-size: 14px">→ PROCESS ⚙️ →</small></div>
+            <div class="flex-1">
+              {{
+                md`
+                \`index.html\`
+                ~~~html
+                <html>
+                <body>
+                  3
+                  <!-- MDX content as HTML here -->
+                </body>
+                </html>
+                ~~~
+                `
+              }}
+            </div>
+          </div>
+        </section>
+
+        <section data-transition="slide">
+          <h2>.vue</h2>
+        </section>
+
+        <section data-transition="slide">
+          <div class="display-flex" style="align-items: center; justify-content: stretch">
+            <div class="flex-1">
+              {{
+                md`
+                \`index.xyz\`
+                ~~~abell
+                <%
+                  import content from './content.mdx';
+                  const three: number = 3;
+                %>
+                <html>
+                <body>
+                  <% three %>
+                  <% content %>
+                </body>
+                </html>
+                ~~~
+                `
+              }}
+            </div>
+            <div class="flex-1">
+              {{
+                md`
+                \`temp-index.ts\`
+                ~~~js
+                import content from './content.mdx';
+                const three: number = 3;
+
+                export function html() {
+                  return \`
+                    <html>
+                    <body>
+                      \${three}
+                      \${content}
+                    </body>
+                    </html>
+                  \`
+                }
+                ~~~
+                `
+              }}
+            </div>
+            <div><small style="font-size: 14px">→ Pass it to Bundler ⚙️ →</small></div>
+          </div>
+        </section>
+      </section>
+
+      <!-- 
+      - How abell v0 was similar to Jekyll, Hugo
+      - What went wrong with v0?
+      - How eleventy did it
+      - How bundlers help
+      -->
+
+      <section>
+        {{ prosAndCons({ unchecked: [4], logo: 'jekyll-hugo' }) }}
+      </section>
+
+      <section data-auto-animate>
+        {{ prosAndCons({ unchecked: [1, 2], logo: 'react-remix-astro' }) }}
+      </section>
+
+      <section>
+        {{ prosAndCons({ unchecked: [], logo: 'abell' }) }}
+      </section>
+
+
+      <section data-auto-animate>
+        <div class="introducing-abell">
+          <p class="introduction-text">Introducing</p>
+        </div>
+      </section>
+
+      <section data-auto-animate>
+        <div class="introducing-abell">
+          <p class="introduction-text">Introducing</p>
+          <div class="display-flex abell-heading">
+            <img src="/abell-logo.png" width="130px" alt="Abell Logo" />
+            <h1>Abell</h1>
+          </div>
+          <p class="subtitle">A Low-Level, Framework Agnostic, <br/>Vite Powered Static-Site-Generator</p>
+        </div>
+      </section>
+
+      <section>
+        <h3>Abell is a <span class="bold">Low-Level</span> Static Site Generator</h3>
+        <aside class="notes">
+        {{ 
+          md`
+          - No Boilerplate
+          - Imports
+          - Components
+            - console log
+          `
+        }}
+        </aside>
+      </section>
+
+      <section>
+        <h3>Abell is a <span class="bold">Framework Agnostic</span> Static Site Generator</h3>
+        <div class="fragment"></div>
+      </section>
+
+      <section>
+        <img width="200px" src="/vue.png" />
+      </section>
+
+      <section>
+        <img width="200px" src="/react.webp" />
+      </section>
+
+      <section>
+        <h3>Abell is a <span class="bold">Vite Powered</span> Static Site Generator</h3>
+      </section>
+
+      <section>
+        <h3>Abell Plugins?</h3>
+      </section>
+
+      <section>
+        <h3 class="strike">Abell Plugins?</h3>
+      </section>
+
+      <section>
+        <ul>
+          <li class="fragment"><span>How to use Sitemap?</span> <code class="fragment">vite-plugin-sitemap</code></li>
+          <li class="fragment"><span>How to use Markdown?</span> <code class="fragment">vite-plugin-md-to-html</code></li>
+          <li class="fragment"><span>How to use MDX?</span> <code class="fragment">@mdx-js/rollup</code></li>
+        </ul>
+      </section>
+
+      <section>
+        {{
+          md`
+          ~~~ts
+          // vite.config.ts
+          import { defineConfig } from 'abell';
+          import mdx from '@mdx-js/rollup';
+          import { vitePluginJSXToHTML } from 'vite-plugin-jsx-to-html';
+
+          export default defineConfig({
+            plugins: [
+              mdx(), // Turns MDX to JSX
+              vitePluginJSXToHTML({ extensions: ['.mdx'] }), // Turns JSX to HTML
+            ]
+          })
+          ~~~
+          `
+        }}
+      </section>
+
+      <section>
+        {{
+          md`
+          ~~~ts
+          // vite.config.ts
+          import { defineConfig } from 'abell';
+          import mdx from '@mdx-js/rollup';
+          import { vitePluginJSXToHTML } from 'vite-plugin-jsx-to-html';
+          import rehypeSlug from 'rehype-slug';
+
+          export default defineConfig({
+            plugins: [
+              mdx({
+                rehypePlugins: [rehypeSlug]
+              }), // Turns MDX to JSX
+              vitePluginJSXToHTML({ extensions: ['.mdx'] }), // Turns JSX to HTML
+            ]
+          })
+          ~~~
+          `
+        }}
+      </section>
+
+      <section>
+        <h3>Source Plugins?</h3>
+        <div class="fragment">
+        {{
+          md`
+          ~~~ts
+          import index from './index.abell';
+          import layout from './layout.abell';
+
+          const response = await fetch('https://your-wordpress-site.com/wp-json/wp/v2/posts').then((res) => res.json());
+          const posts = response.data;
+          
+          export const makeRoutes = () => {
+            return [
+              {
+                path: '/',
+                render: () => index()
+              }
+              ...posts.map((post) => ({
+                path: post.slug,
+                render: () => layout(post.content.rendered)
+              }))
+            ]
+          }
+          ~~~
+          `
+        }}
+        </div>
+      </section>
+
+      <section>
+        <h2>Ecosystem?</h2>
+        <p class="fragment">All of JS Ecosystem 🫡</p>
+      </section>
+
+      <section>
+        <h2>And finally...</h2>
+      </section>
+
+      <section>
+        <h2>🥁</h2>
+      </section>
+
+
+      <section data-auto-animate>
+        <div class="display-flex">
+          <div data-auto-animate-id="abell-v1" class="flex-1">
+            <div class="display-flex abell-heading">
+              <img src="/abell-logo.png" width="130px" alt="Abell Logo" />
+              <h1>Abell</h1>
+            </div>
+            <h2 style="opacity: .6; display: inline-block;" data-id="v1-beta">✨ v1 beta ✨</h2>
+          </div>
+        </div>
+      </section>
+
+
+      <section data-auto-animate>
+        <div class="display-flex">
+          <div data-auto-animate-id="abell-v1" class="flex-1">
+            <div class="display-flex abell-heading">
+              <img src="/abell-logo.png" width="130px" alt="Abell Logo" />
+              <h1>Abell</h1>
+            </div>
+            <h2 style="opacity: .6; display: inline-block;" data-id="v1-beta">✨ v1 beta ✨</h2>
+            <div style="margin: 18px;"><code>npx create-abell</code></div>
+          </div>
+        </div>
+      </section>
+
+
+      <section>
+        <div style="width: 200px; margin: auto;">
+          <ul class="socials" style="flex-direction: column; text-align: center; width: 100%;">
+            <li><img width="20px" style="margin: 12px 0px" src="/abell-logo.png" /> abelljs.org</li>
+            <li><img width="18px" style="margin: 12px 0px" src="/github-logo.svg" /> github.com/abelljs/abell</li>
+            <li><img width="16px" style="margin: 12px 0px" src="/twitter-birb.png" /> saurabhdawaree</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="thank-you-slide">
+        <h2>Thank You</h2>
+        <img width="400px" src="/a-very-useful-image.png" />
       </section>
 
       
