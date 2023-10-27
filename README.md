@@ -16,3 +16,7 @@ pnpm dev
 # To create build
 pnpm build
 ```
+
+---
+
+Built using [Abell](https://abelljs.org) and [Reveal.js](https://revealjs.com/) 🤗
